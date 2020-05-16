@@ -1,0 +1,50 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark mb-3 shadowzz"
+  style="background-color: #5d1451;"
+>
+  <a class="navbar-brand" href="/">MOVIEZZZ</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/favourites">Favourites</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mr-2">
+        <form
+          action="/search"
+          method="POST"
+          id="search-form"
+          class="form-inline"
+        >
+          <div class="form-group-inline mr-2">
+            <select class="form-control" name="cat" id="cat">
+              <option value="movie">Movie</option>
+              <option value="person">Actor</option>
+            </select>
+          </div>
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            id="movie"
+            placeholder="Search"
+            name="movieSearch"
+          />
+          <input type="submit" class="btn btn-outline-primary" />
+        </form>
+      </li>
+    </ul>
+  </div>
+</nav>

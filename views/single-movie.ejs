@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= movie.title %></title>
+    <% include head %>
+  </head>
+
+  <body>
+    <% include navbar %>
+    <div class="container mt-5">
+      <div class="card" style="background-color: rgb(165, 121, 219);">
+        <div class="card-header">
+          <h2 class="text-center" style="letter-spacing: 3px;">
+            <%= movie.title %>
+          </h2>
+        </div>
+        <div class="card-body text-center">
+          <img
+            class="card-img-top mb-3 movie-poster"
+            src="http://image.tmdb.org/t/p/w300<%= movie.poster_path  %>"
+            alt="Card image cap"
+          />
+          <h4 class="card-title">Overview</h4>
+          <p style="font-size: 1.2rem; line-height: 1.5;">
+            <%= movie.overview %>
+          </p>
+          <div class="movie-info-box my-3">
+            <ul class="list-group movie-info-ul">
+              <li class="list-group-item ">
+                IMDB Link:
+                <a
+                  href="https://www.imdb.com/title/<%= movie.imdb_id %>"
+                  target="blank"
+                  >Click here</a
+                >
+              </li>
+              <li class="list-group-item movie-li">
+                Release Date: <%= movie.release_date %>
+              </li>
+              <li class="list-group-item">
+                Runtime: <%= movie.runtime %> minutes
+              </li>
+              <li class="list-group-item movie-li">
+                Genre: <% movie.genres.forEach(item=>{ %>
+                <span class="btn btn-outline-primary btn-sm"
+                  ><%= item.name %></span
+                >
+                <% }) %>
+              </li>
+              <li class="list-group-item">
+                Is Adult?: <%= !movie.adult? "No":"Yes"%>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

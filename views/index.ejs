@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie App</title>
+    <% include head %>
+  </head>
+
+  <body>
+    <% include navbar %>
+    <div class="container">
+      <h2 class="text-center">Now Playing</h2>
+
+      <div class="card-holder">
+        <% for(let i = 0; i < parsedData.length; i++) { %>
+        <div class="card shadowzz my-4 p-1">
+          <a href="/movie/<%= parsedData[i].id %>"
+            ><img
+              class="card-img-top"
+              src="http://image.tmdb.org/t/p/w300<%= parsedData[i].poster_path  %>"
+              alt="Card image cap"
+          /></a>
+          <div class="card-body">
+            <h5 class="card-title text-center"><%= parsedData[i].title %></h5>
+            <ul class="list-group list-group-flush mb-2">
+              <li class="list-group-item text-center">
+                Release Date: <%= parsedData[i].release_date %>
+              </li>
+              <li class="list-group-item text-center">
+                Average Rating: <%= parsedData[i].vote_average %>
+              </li>
+            </ul>
+            <div class="text-center mt-2">
+              <a
+                href="/movie/<%= parsedData[i].id %>"
+                class="btn btn-outline-danger"
+                >View</a
+              >
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

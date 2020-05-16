@@ -1,0 +1,64 @@
+body {
+  font-family: "Patrick Hand", cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #dfc5fe;
+  color: black;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.shadowzz {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-holder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card-holder {
+    flex-direction: column;
+  }
+}
+
+.card {
+  margin: 20px 0 20px 0;
+}
+
+.movie-poster {
+  width: 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .movie-poster {
+    width: 80%;
+  }
+}
+
+.movie-info-box {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-info-ul {
+  width: 60%;
+}
+
+@media only screen and (max-width: 770) {
+  .movie-poster {
+    width: 80%;
+  }
+  .movie-info-ul {
+    width: 80%;
+  }
+}
+
+.movie-li {
+  background-color: #dfc5fe;
+}
