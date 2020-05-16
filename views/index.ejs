@@ -13,9 +13,9 @@
       <div class="card-holder">
         <% for(let i = 0; i < parsedData.length; i++) { %>
         <div class="card shadowzz my-4 p-1">
-          <a href="/movie/<%= parsedData[i].id %>"
+          <a class="text-center" href="/movie/<%= parsedData[i].id %>"
             ><img
-              class="card-img-top"
+              class="card-image-top card-poster-image"
               src="http://image.tmdb.org/t/p/w300<%= parsedData[i].poster_path  %>"
               alt="Card image cap"
           /></a>

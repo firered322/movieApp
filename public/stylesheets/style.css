@@ -39,6 +39,9 @@ a {
   .movie-poster {
     width: 80%;
   }
+  .card-poster-image{
+    width: 300px;
+  }
 }
 
 .movie-info-box {
